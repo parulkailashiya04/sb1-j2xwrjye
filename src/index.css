@@ -1,0 +1,240 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom animations and effects */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s forwards;
+}
+
+.section:nth-child(1) { animation-delay: 0.1s; }
+.section:nth-child(2) { animation-delay: 0.2s; }
+.section:nth-child(3) { animation-delay: 0.3s; }
+.section:nth-child(4) { animation-delay: 0.4s; }
+.section:nth-child(5) { animation-delay: 0.5s; }
+
+/* Button styles */
+.cta-button {
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.4);
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.cta-button:hover {
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.8);
+  transform: translateY(-2px);
+  color: #fff;
+}
+
+.cta-button-large {
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  color: #fff;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
+  font-weight: 600;
+  font-size: 1.125rem;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.cta-button-large:hover {
+  box-shadow: 0 0 25px rgba(139, 92, 246, 0.8);
+  transform: translateY(-3px);
+  color: #fff;
+}
+
+/* Plan card styles */
+.plan-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 32px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.plan-card:hover {
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+  transform: translateY(-3px);
+  border-color: rgba(139, 92, 246, 0.3);
+}
+
+/* Feature card styles */
+.feature-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 24px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.feature-card:hover {
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+  transform: translateY(-2px);
+  border-color: rgba(59, 130, 246, 0.2);
+}
+
+/* Cal.com container - Enhanced responsive design */
+.cal-container {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 16px;
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s 0.3s forwards;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* Cal.com iframe responsive wrapper */
+.cal-embed-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Cal.com embed styling */
+.cal-embed {
+  width: 100% !important;
+  height: 600px !important;
+  border: none !important;
+  border-radius: 12px !important;
+  background: transparent !important;
+  min-height: 500px !important;
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Stats cards */
+.stats-card {
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+}
+
+.stats-card:hover {
+  transform: translateY(-2px);
+}
+
+.stats-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Process steps */
+.process-step {
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  color: white;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0 auto 24px;
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .cta-button-large {
+    padding: 14px 28px;
+    font-size: 1rem;
+  }
+  
+  .plan-card {
+    padding: 24px;
+  }
+  
+  .feature-card {
+    padding: 20px;
+  }
+  
+  .cal-container {
+    padding: 12px;
+    margin: 0 -4px;
+  }
+  
+  .cal-embed {
+    height: 500px !important;
+    min-height: 450px !important;
+  }
+  
+  .cal-embed-wrapper {
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .cal-container {
+    padding: 8px;
+    margin: 0 -8px;
+    border-radius: 12px;
+  }
+  
+  .cal-embed {
+    height: 450px !important;
+    min-height: 400px !important;
+  }
+}
+
+/* Ensure Cal.com calendar fits properly */
+@media (min-width: 769px) {
+  .cal-embed {
+    height: 650px !important;
+    min-height: 600px !important;
+  }
+}
+
+/* Large screens optimization */
+@media (min-width: 1024px) {
+  .cal-embed {
+    height: 700px !important;
+    min-height: 650px !important;
+  }
+}
